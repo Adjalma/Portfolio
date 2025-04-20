@@ -390,34 +390,106 @@ footer {
     color: var(--secondary-color);
 }
 
-/* Atualizando estilos da seção sobre */
+/* Estilos para a seção Sobre */
+.sobre {
+    padding: 4rem 2rem;
+    background: var(--background-color);
+}
+
 .sobre-content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.profile-info {
+    background: var(--card-background);
     padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.sobre-content p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
+.profile-info h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 }
 
-.sobre-content ul {
+.headline {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.summary {
+    margin-bottom: 2rem;
+}
+
+.summary p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.expertise-list {
     list-style: none;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
 }
 
-.sobre-content ul li {
-    padding: 0.5rem 0;
+.expertise-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: rgba(9, 132, 227, 0.1);
+    border-radius: 8px;
+}
+
+.expertise-list i {
+    color: var(--secondary-color);
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.key-achievements, .education {
+    margin-top: 2rem;
+}
+
+.key-achievements h4, .education h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.key-achievements ul, .education ul {
+    list-style: none;
+}
+
+.key-achievements li {
+    margin-bottom: 0.8rem;
     padding-left: 1.5rem;
     position: relative;
 }
 
-.sobre-content ul li::before {
-    content: "•";
+.key-achievements li::before {
+    content: "→";
     position: absolute;
     left: 0;
     color: var(--secondary-color);
+}
+
+.education li {
+    margin-bottom: 1.2rem;
+}
+
+.education strong {
+    display: block;
+    color: var(--primary-color);
+}
+
+.education span {
+    display: block;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
 }
 
 /* Estilos para as páginas de demonstração */
@@ -717,4 +789,101 @@ footer {
     margin-top: 2rem;
     display: flex;
     gap: 1rem;
+}
+
+/* Estilos para Experience Highlights */
+.experience-highlights {
+    margin-top: 3rem;
+}
+
+.experience-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.exp-card {
+    background: rgba(9, 132, 227, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+}
+
+.exp-card h5 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.exp-card .period {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para Certificações */
+.certifications {
+    margin-top: 3rem;
+}
+
+.certifications ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.certifications li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(9, 132, 227, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.certifications li:hover {
+    transform: translateY(-3px);
+}
+
+.certifications i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+/* Estilos para Publicações */
+.publications {
+    margin-top: 3rem;
+}
+
+.publications ul {
+    margin-top: 1rem;
+}
+
+.publications li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(9, 132, 227, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.publications li:hover {
+    transform: translateY(-3px);
+}
+
+.publications i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
 } 
