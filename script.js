@@ -179,7 +179,11 @@ window.addEventListener('scroll', () => {
 // Adicionar ao script.js
 document.addEventListener('DOMContentLoaded', () => {
     // Animação suave ao scroll
-    AOS.init();
+    AOS.init({
+        duration: 800,
+        offset: 100,
+        once: true
+    });
     
     // Destacar menu ativo
     const sections = document.querySelectorAll('section');
@@ -248,6 +252,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (window.scrollY / windowHeight) * 100;
         progressBar.style.width = `${scrolled}%`;
+    });
+
+    // Adicionar classes de animação
+    document.querySelectorAll('.exp-card').forEach((card, index) => {
+        card.setAttribute('data-aos', 'fade-up');
+        card.setAttribute('data-aos-delay', (index * 100).toString());
+    });
+
+    document.querySelectorAll('.certifications li').forEach((cert, index) => {
+        cert.setAttribute('data-aos', 'fade-right');
+        cert.setAttribute('data-aos-delay', (index * 100).toString());
+    });
+
+    document.querySelectorAll('.publications li').forEach((pub, index) => {
+        pub.setAttribute('data-aos', 'fade-left');
+        pub.setAttribute('data-aos-delay', (index * 100).toString());
     });
 });
 
