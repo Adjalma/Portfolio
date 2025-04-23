@@ -16,7 +16,7 @@ declare module '@mui/material/Grid' {
   interface GridProps {
     item?: boolean;
     container?: boolean;
-    component?: ElementType<any>;
+    component?: ElementType | string;
     xs?: number | boolean;
     sm?: number | boolean;
     md?: number | boolean;
@@ -36,7 +36,7 @@ declare module '@mui/material/ListItem' {
   interface ListItemProps {
     button?: boolean;
     selected?: boolean;
-    component?: ElementType<any>;
+    component?: ElementType | string;
     divider?: boolean;
     onClick?: () => void;
     alignItems?: 'flex-start' | 'center';

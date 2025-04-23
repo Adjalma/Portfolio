@@ -1,5 +1,5 @@
 {
-  "name": "adjalma-portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "scripts": {
     "dev": "react-scripts start",
@@ -7,26 +7,18 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "@types/node": "^22.14.1",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "@types/react-leaflet": "^2.8.3",
-    "@types/three": "^0.159.0",
-    "http-server": "^14.1.1"
-  },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^7.0.2",
-    "@mui/material": "^7.0.2",
-    "@types/chart.js": "^2.9.41",
-    "axios": "^1.8.4",
-    "chart.js": "^4.4.9",
-    "leaflet": "^1.9.4",
-    "react-chartjs-2": "^5.3.0",
-    "react-leaflet": "^5.0.0",
-    "react-use-websocket": "^4.13.0",
-    "three": "^0.159.0"
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.0",
+    "@mui/icons-material": "^5.11.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^4.9.5"
   }
 }
