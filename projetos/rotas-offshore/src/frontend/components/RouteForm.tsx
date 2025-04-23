@@ -2,19 +2,15 @@ import React, { useState } from 'react';
 import { TextField, Button, Grid } from '@mui/material';
 
 interface Props {
-  onSubmit: (data: any) => void;
+  onSubmit: (params: any) => void;
 }
 
 export const RouteForm: React.FC<Props> = ({ onSubmit }) => {
-  const [formData, setFormData] = useState({
-    origin: { lat: '', lon: '' },
-    destination: { lat: '', lon: '' },
-    vesselType: ''
-  });
+  const [origin, setOrigin] = useState({ lat: '', lon: '' });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(formData);
+    onSubmit(origin);
   };
 
   return (
@@ -22,24 +18,18 @@ export const RouteForm: React.FC<Props> = ({ onSubmit }) => {
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <TextField
-            label="Origem (Lat)"
-            value={formData.origin.lat}
-            onChange={e => setFormData({
-              ...formData,
-              origin: { ...formData.origin, lat: e.target.value }
-            })}
             fullWidth
+            label="Origem (Lat)"
+            value={origin.lat}
+            onChange={(e) => setOrigin({ ...origin, lat: e.target.value })}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
-            label="Origem (Lon)"
-            value={formData.origin.lon}
-            onChange={e => setFormData({
-              ...formData,
-              origin: { ...formData.origin, lon: e.target.value }
-            })}
             fullWidth
+            label="Origem (Lon)"
+            value={origin.lon}
+            onChange={(e) => setOrigin({ ...origin, lon: e.target.value })}
           />
         </Grid>
         <Grid item xs={12}>

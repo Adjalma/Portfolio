@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Card, Typography, CircularProgress } from '@mui/material';
-import { Sentiment } from '@mui/icons-material';
+import { SentimentSatisfiedAlt as SentimentIcon } from '@mui/icons-material';
 
 interface Props {
   sentiment: {
@@ -20,12 +20,10 @@ export const SentimentDashboard: React.FC<Props> = ({ sentiment }) => {
 
   return (
     <Card>
-      <Box p={3} display="flex" alignItems="center">
-        <Sentiment sx={{ fontSize: 40, mr: 2 }} />
-        <Box>
-          <Typography variant="h6">
-            Análise de Sentimento
-          </Typography>
+      <Box p={2} display="flex" alignItems="center">
+        <SentimentIcon fontSize="large" color="primary" />
+        <Box ml={2}>
+          <Typography variant="h6">Análise de Sentimento</Typography>
           <Typography
             variant="h4"
             sx={{ color: getSentimentColor(sentiment.score) }}

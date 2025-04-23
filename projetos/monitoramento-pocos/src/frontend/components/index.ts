@@ -1,4 +1,4 @@
-export { WellStatus } from './WellStatus';
-export { RealTimeChart } from './RealTimeChart';
-export { AlertsPanel } from './AlertsPanel';
-export { ParametersDashboard } from './ParametersDashboard'; 
+export * from './RealTimeChart';
+export * from './WellStatus';
+export * from './AlertsPanel';
+export * from './ParametersDashboard'; 

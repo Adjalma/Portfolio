@@ -4,12 +4,17 @@ export const theme = createTheme({
   components: {
     MuiGrid: {
       defaultProps: {
-        item: false
+        container: false
       },
       styleOverrides: {
         root: {
-          // Estilos personalizados para o Grid
+          // Estilos customizados aqui
         }
+      }
+    },
+    MuiListItem: {
+      defaultProps: {
+        button: false
       }
     }
   },

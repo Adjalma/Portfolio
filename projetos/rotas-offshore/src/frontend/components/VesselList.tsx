@@ -1,6 +1,16 @@
 import React from 'react';
-import { List, ListItem, ListItemText, Chip } from '@mui/material';
-import { Vessel } from '../types';
+import { List, ListItem, ListItemText, ListItemIcon, Card, Typography } from '@mui/material';
+import { VesselIcon } from '@shared/components/icons';
+
+interface Vessel {
+  id: string;
+  name: string;
+  position: {
+    lat: number;
+    lon: number;
+  };
+  status: 'active' | 'inactive';
+}
 
 interface Props {
   vessels: Vessel[];
@@ -8,19 +18,20 @@ interface Props {
 
 export const VesselList: React.FC<Props> = ({ vessels }) => {
   return (
-    <List>
-      {vessels.map(vessel => (
-        <ListItem key={vessel.id}>
-          <ListItemText
-            primary={vessel.name}
-            secondary={`Lat: ${vessel.position.lat}, Lon: ${vessel.position.lon}`}
-          />
-          <Chip
-            label={vessel.status}
-            color={vessel.status === 'active' ? 'success' : 'warning'}
-          />
-        </ListItem>
-      ))}
-    </List>
+    <Card>
+      <List>
+        {vessels.map((vessel) => (
+          <ListItem key={vessel.id}>
+            <ListItemIcon>
+              <VesselIcon color={vessel.status === 'active' ? 'primary' : 'disabled'} />
+            </ListItemIcon>
+            <ListItemText 
+              primary={vessel.name}
+              secondary={`${vessel.position.lat.toFixed(2)}, ${vessel.position.lon.toFixed(2)}`}
+            />
+          </ListItem>
+        ))}
+      </List>
+    </Card>
   );
 }; 
