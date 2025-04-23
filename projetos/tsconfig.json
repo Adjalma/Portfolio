@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@shared/*": ["shared/*"],
+      "@components/*": ["src/frontend/components/*"],
+      "@utils/*": ["src/frontend/utils/*"],
+      "@services/*": ["src/frontend/services/*"],
+      "@types/*": ["src/frontend/types/*"]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./shared/types"
+    ]
+  },
+  "include": [
+    "src",
+    "shared",
+    "**/src/**/*.ts",
+    "**/src/**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
+} 

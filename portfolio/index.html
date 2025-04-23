@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjalma Aguiar - Full Stack Developer & Data Scientist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Adjalma Aguiar</div>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#oil-gas-experience">O&G</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Adjalma Aguiar</h1>
+            <h2>Full Stack Developer | Data Scientist | O&G Specialist</h2>
+            <p>Especialista em desenvolvimento de soluções tecnológicas para a indústria de Óleo e Gás</p>
+            <div class="social-links">
+                <a href="https://github.com/aguiarandre" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/adjalma-aguiar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.upwork.com/freelancers/aguiaradjalma" target="_blank"><i class="fas fa-briefcase"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Mim</h2>
+        <div class="sobre-content">
+            <p>Profissional com mais de 10 anos de experiência combinando expertise em:</p>
+            <ul>
+                <li>Desenvolvimento de software para a indústria de O&G</li>
+                <li>Análise de dados e Machine Learning</li>
+                <li>Otimização de processos industriais</li>
+                <li>Desenvolvimento Full Stack</li>
+            </ul>
+            <p>Especializado em criar soluções tecnológicas para desafios complexos da indústria de Óleo e Gás.</p>
+        </div>
+    </section>
+
+    <section id="oil-gas-experience">
+        <h2>Experiência em Óleo & Gás</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <h3>Especialista em Análise de Dados para O&G</h3>
+                <p class="period">2015 - Presente</p>
+                <ul>
+                    <li>Desenvolvimento de algoritmos para otimização de produção</li>
+                    <li>Análise de dados de sensores em tempo real</li>
+                    <li>Implementação de soluções de machine learning para previsão de falhas</li>
+                    <li>Criação de dashboards para monitoramento de KPIs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Portfolio com os projetos de O&G que você já aprovou -->
+    <section id="portfolio">
+        <h2>Projetos em Destaque</h2>
+        <div class="projetos-grid">
+            <!-- Projeto 1: Sistema de Análise de Dados de Poços -->
+            <div class="projeto-card" data-aos="fade-up">
+                <div class="projeto-preview">
+                    <img src="https://images.unsplash.com/photo-1544985361-b899f7f194c3?w=500&h=300&fit=crop" alt="Oil Well Analysis">
+                    <div class="preview-overlay">
+                        <button class="preview-btn" onclick="showPreview('oil-analysis')">
+                            <i class="fas fa-eye"></i> Preview Rápido
+                        </button>
+                    </div>
+                </div>
+                <div class="projeto-info">
+                    <h3>Sistema de Análise de Poços</h3>
+                    <p class="tecnologias">Python | Pandas | Scikit-learn | Plotly</p>
+                    <p class="descricao">Sistema de análise e otimização de produção de poços de petróleo</p>
+                    <ul class="features">
+                        <li>Análise de dados de produção</li>
+                        <li>Previsão de falhas de equipamentos</li>
+                        <li>Otimização de parâmetros operacionais</li>
+                        <li>Dashboard interativo</li>
+                    </ul>
+                    <div class="projeto-links">
+                        <a href="projetos/oil-analysis/demo/index.html" class="btn-demo" target="_blank">Ver Projeto</a>
+                        <a href="https://github.com/aguiarandre/oil-analysis" class="btn-github" target="_blank">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 2: Simulador de Reservatórios -->
+            <div class="projeto-card" data-aos="fade-up">
+                <div class="projeto-preview">
+                    <img src="https://images.unsplash.com/photo-1471513671800-b09c87e1497c" alt="Reservoir Simulation">
+                    <div class="preview-overlay">
+                        <button class="preview-btn" onclick="showPreview('reservoir-sim')">
+                            <i class="fas fa-eye"></i> Preview Rápido
+                        </button>
+                    </div>
+                </div>
+                <div class="projeto-info">
+                    <h3>Simulador de Reservatórios</h3>
+                    <p class="tecnologias">MATLAB | Python | NumPy | C++</p>
+                    <p class="descricao">Simulador numérico para análise de reservatórios de petróleo</p>
+                    <ul class="features">
+                        <li>Modelagem matemática avançada</li>
+                        <li>Simulação de fluxo multifásico</li>
+                        <li>Análise de sensibilidade</li>
+                        <li>Visualização 3D</li>
+                    </ul>
+                    <div class="projeto-links">
+                        <a href="/projetos/reservoir-sim" class="btn-demo">Ver Projeto</a>
+                        <a href="https://github.com/aguiarandre/reservoir-sim" class="btn-github">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 3: Sistema de Monitoramento de Equipamentos -->
+            <div class="projeto-card" data-aos="fade-up">
+                <div class="projeto-preview">
+                    <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece" alt="Equipment Monitoring">
+                    <div class="preview-overlay">
+                        <button class="preview-btn" onclick="showPreview('oil-monitoring')">
+                            <i class="fas fa-eye"></i> Preview Rápido
+                        </button>
+                    </div>
+                </div>
+                <div class="projeto-info">
+                    <h3>Monitoramento IoT para O&G</h3>
+                    <p class="tecnologias">Python | Node.js | InfluxDB | Grafana</p>
+                    <p class="descricao">Sistema IoT para monitoramento em tempo real de equipamentos</p>
+                    <ul class="features">
+                        <li>Monitoramento em tempo real</li>
+                        <li>Detecção de anomalias</li>
+                        <li>Alertas automáticos</li>
+                        <li>Análise preditiva</li>
+                    </ul>
+                    <div class="projeto-links">
+                        <a href="/projetos/oil-monitoring" class="btn-demo">Ver Projeto</a>
+                        <a href="https://github.com/aguiarandre/oil-monitoring" class="btn-github">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 4: Análise de Dados Sísmicos -->
+            <div class="projeto-card" data-aos="fade-up">
+                <div class="projeto-preview">
+                    <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074" alt="Seismic Analysis">
+                    <div class="preview-overlay">
+                        <button class="preview-btn" onclick="showPreview('seismic-analysis')">
+                            <i class="fas fa-eye"></i> Preview Rápido
+                        </button>
+                    </div>
+                </div>
+                <div class="projeto-info">
+                    <h3>Processamento de Dados Sísmicos</h3>
+                    <p class="tecnologias">Python | TensorFlow | OpenCV | NumPy</p>
+                    <p class="descricao">Sistema de processamento e análise de dados sísmicos</p>
+                    <ul class="features">
+                        <li>Processamento de imagens sísmicas</li>
+                        <li>Machine Learning para interpretação</li>
+                        <li>Visualização 3D de estruturas</li>
+                        <li>Análise de atributos sísmicos</li>
+                    </ul>
+                    <div class="projeto-links">
+                        <a href="/projetos/seismic-analysis" class="btn-demo">Ver Projeto</a>
+                        <a href="https://github.com/aguiarandre/seismic-analysis" class="btn-github">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Desenvolvimento</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>JavaScript/Node.js</li>
+                    <li>React/React Native</li>
+                    <li>SQL/NoSQL</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Data Science</h3>
+                <ul>
+                    <li>Machine Learning</li>
+                    <li>Deep Learning</li>
+                    <li>Análise de Dados</li>
+                    <li>Visualização de Dados</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>O&G Específico</h3>
+                <ul>
+                    <li>Simulação de Reservatórios</li>
+                    <li>Análise de Dados de Produção</li>
+                    <li>Processamento Sísmico</li>
+                    <li>Modelagem Numérica</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="contato-container">
+            <form id="contato-form" onSubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/aguiarandre" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/adjalma-aguiar" target="_blank">LinkedIn</a>
+            <a href="https://www.upwork.com/freelancers/aguiaradjalma" target="_blank">Upwork</a>
+        </div>
+        <p>&copy; 2024 Adjalma Aguiar - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Modal de Preview -->
+    <div id="preview-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="preview-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
