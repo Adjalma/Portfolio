@@ -5,6 +5,5 @@ declare namespace NodeJS {
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
     PWD: string;
-    // Adicione outras variáveis de ambiente conforme necessário
   }
 } 

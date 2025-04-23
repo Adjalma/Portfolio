@@ -1,5 +1,6 @@
 import { ElementType } from 'react';
-import { GridProps as MuiGridProps, Theme } from '@mui/material';
+import { Theme } from '@mui/material/styles';
+import { GridProps as MuiGridProps } from '@mui/material/Grid';
 
 declare module '@mui/material/Grid' {
   interface GridProps extends MuiGridProps {
