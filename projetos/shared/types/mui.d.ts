@@ -10,6 +10,14 @@ declare module '@mui/material/styles' {
       };
     };
   }
+
+  interface ThemeOptions {
+    custom?: {
+      grid?: {
+        item?: boolean;
+      };
+    };
+  }
 }
 
 declare module '@mui/material/Grid' {
@@ -49,5 +57,10 @@ declare module '@mui/material/ListItem' {
 declare module '@mui/material' {
   interface DefaultComponentProps<T extends ElementType> {
     component?: T;
+  }
+
+  export interface SvgIconProps {
+    component?: ElementType;
+    children?: React.ReactNode;
   }
 }
