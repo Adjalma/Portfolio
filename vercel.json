@@ -15,21 +15,13 @@
       "dest": "/static/$1"
     },
     {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "/manifest.json"
-    },
-    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
   ],
   "git": {
     "deploymentEnabled": {
-      "main": true
+      "master": true
     }
   }
 } 
