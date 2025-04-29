@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Container, Box, Typography } from '@mui/material';
+import { Container, Box } from '@mui/material';
 
 // Componentes
 import { Header } from './components/Header';
@@ -10,20 +10,17 @@ import { ProjectList } from './components/ProjectList';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#1976d2',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-    background: {
-      default: '#f5f5f5',
-      paper: '#ffffff',
-    },
-  },
-});
+// Projetos
+import { MonitoramentoPocosApp } from './projects/monitoramento-pocos/src/App';
+import { OilAnalysisApp } from './projects/oil-analysis/src/App';
+import { HSEDashboardApp } from './projects/hse-dashboard/src/App';
+import { ProductionOptimizationApp } from './projects/production-optimization/src/App';
+import { EquipmentMonitoringApp } from './projects/equipment-monitoring/src/App';
+import { DigitalLibraryApp } from './projects/digital-library/src/App';
+import { WellSimulationApp } from './projects/well-simulation/src/App';
+import { MaintenancePredictorApp } from './projects/maintenance-predictor/src/App';
+
+import { theme } from './theme';
 
 export const App = () => {
   return (
@@ -37,6 +34,14 @@ export const App = () => {
               <Route path="/" element={<ProjectList />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/monitoramento-pocos/*" element={<MonitoramentoPocosApp />} />
+              <Route path="/oil-analysis/*" element={<OilAnalysisApp />} />
+              <Route path="/hse-dashboard/*" element={<HSEDashboardApp />} />
+              <Route path="/production-optimization/*" element={<ProductionOptimizationApp />} />
+              <Route path="/equipment-monitoring/*" element={<EquipmentMonitoringApp />} />
+              <Route path="/digital-library/*" element={<DigitalLibraryApp />} />
+              <Route path="/well-simulation/*" element={<WellSimulationApp />} />
+              <Route path="/maintenance-predictor/*" element={<MaintenancePredictorApp />} />
             </Routes>
           </Container>
         </Box>

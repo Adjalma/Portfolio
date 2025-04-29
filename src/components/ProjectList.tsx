@@ -1,40 +1,44 @@
 import React from 'react';
-import { Grid, Card, CardContent, CardMedia, Typography, CardActionArea } from '@mui/material';
-
-const projects = [
-  {
-    id: 1,
-    title: 'Monitoramento de Poços',
-    description: 'Sistema de monitoramento em tempo real de poços de petróleo',
-    image: '/images/projects/monitoring.jpg',
-    link: '/monitoramento-pocos'
-  },
-  {
-    id: 2,
-    title: 'Análise de Óleo',
-    description: 'Dashboard para análise de qualidade de óleo',
-    image: '/images/projects/oil.jpg',
-    link: '/oil-analysis'
-  },
-  // Adicione mais projetos conforme necessário
-];
+import { Grid, Card, CardContent, CardMedia, Typography, CardActions, Button, Chip, Box } from '@mui/material';
+import { GitHub, Preview } from '@mui/icons-material';
+import { projects } from '../config/projects';
 
 export const ProjectList = () => {
   return (
     <Grid container spacing={3}>
       {projects.map((project) => (
         <Grid item xs={12} sm={6} md={4} key={project.id}>
-          <Card>
-            <CardActionArea href={project.link}>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {project.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {project.description}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+          <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flexGrow: 1 }}>
+              <Typography gutterBottom variant="h5" component="h2">
+                {project.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary" paragraph>
+                {project.description}
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
+                {project.technologies.map((tech) => (
+                  <Chip key={tech} label={tech} size="small" />
+                ))}
+              </Box>
+            </CardContent>
+            <CardActions>
+              <Button 
+                size="small" 
+                href={project.githubUrl}
+                target="_blank"
+                startIcon={<GitHub />}
+              >
+                Código
+              </Button>
+              <Button
+                size="small"
+                href={project.demoUrl}
+                startIcon={<Preview />}
+              >
+                Demo
+              </Button>
+            </CardActions>
           </Card>
         </Grid>
       ))}
