@@ -15,17 +15,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["src/*"],
-      "@shared/*": ["projetos/shared/*"],
-      "@components/*": ["src/components/*"],
-      "@services/*": ["src/services/*"],
-      "@types/*": ["src/types/*"]
+      "@/*": ["./*"],
+      "@components/*": ["components/*"]
     }
   },
-  "include": [
-    "src",
-    "projetos"
-  ]
+  "include": ["src"]
 } 
