@@ -27,8 +27,9 @@
       "dest": "/index.html"
     }
   ],
-  "github": {
-    "enabled": true,
-    "silent": true
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
   }
 } 
