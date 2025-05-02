@@ -1,13 +1,9 @@
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
+node_modules/
 
 # production
-/build
+build/
+dist/
 
 # misc
 .DS_Store
@@ -16,6 +12,7 @@
 .env.test.local
 .env.production.local
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -24,14 +21,5 @@ yarn-error.log*
 .idea/
 .vscode/
 
-# Build
-dist/
+# Gradle
 .gradle/
-build/
-
-# Não ignorar projetos
-!/src/projects/
-!/src/projects/*/src/
-!/src/projects/*/src/components/
-!/src/projects/*/src/components/*.tsx
-!/src/projects/*/src/App.tsx
