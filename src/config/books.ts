@@ -32,9 +32,9 @@ previsão utilizando modelos de machine learning, como regressão
 linear, árvores de decisão e redes neurais. Cada modelo é
 acompanhado por exemplos práticos e exercícios que permitem ao
 leitor aplicar os conhecimentos adquiridos.`,
-    pages: 300,
+    pages: 280,
     language: "Português",
-    isbn: "978-8566636789"
+    isbn: "978-8555194567"
   },
   {
     id: 'python-predictive-insights',

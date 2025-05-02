@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Card, CardContent, CardMedia, Typography, CardActions, Button, Chip, Box } from '@mui/material';
+import { Grid, Card, CardContent, Typography, CardActions, Button, Chip, Box } from '@mui/material';
 import { GitHub, Preview } from '@mui/icons-material';
 import { projects } from '../config/projects';
 

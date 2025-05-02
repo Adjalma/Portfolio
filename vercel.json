@@ -18,10 +18,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "git": {
-    "deploymentEnabled": {
-      "master": true
-    }
-  }
+  ]
 } 

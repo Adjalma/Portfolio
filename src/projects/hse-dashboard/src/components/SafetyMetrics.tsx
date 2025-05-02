@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, Typography, Grid, Card, CardContent } from '@mui/material';
+import { Paper, Typography, Grid } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const safetyData = [

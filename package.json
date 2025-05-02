@@ -2,64 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://adjalma.github.io/Portfolio",
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.17.1",
-    "@mui/lab": "^7.0.0-beta.11",
-    "@mui/material": "^5.14.3",
-    "@nivo/bar": "^0.92.0",
-    "@nivo/core": "^0.92.0",
-    "@nivo/line": "^0.92.0",
-    "@nivo/pie": "^0.92.0",
-    "ajv": "^8.12.0",
-    "ajv-keywords": "^5.1.0",
-    "leaflet": "^1.9.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-leaflet": "^5.0.0",
-    "react-router-dom": "^6.14.2",
-    "recharts": "^2.15.3",
-    "typescript": "^4.9.5"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.39",
-    "@types/react": "^18.2.18",
-    "@types/react-dom": "^18.2.7",
-    "cross-env": "^7.0.3",
-    "gh-pages": "^6.1.1",
-    "msw": "^1.3.2",
-    "react-scripts": "5.0.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env react-scripts start",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -m \"Deploy to GitHub Pages\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "test": "cross-env react-scripts test",
+    "eject": "cross-env react-scripts eject"
   }
 }
