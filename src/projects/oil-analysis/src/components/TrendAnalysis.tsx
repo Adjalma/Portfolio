@@ -3,9 +3,9 @@ import { Paper, Typography, Grid } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const trendData = [
-  { month: 'Jan', quality: 92, contamination: 8 },
-  { month: 'Fev', quality: 94, contamination: 6 },
-  { month: 'Mar', quality: 91, contamination: 9 },
+  { month: 'Jan', quality: 90, degradation: 10 },
+  { month: 'Fev', quality: 85, degradation: 15 },
+  { month: 'Mar', quality: 82, degradation: 18 }
 ];
 
 export const TrendAnalysis = () => {
@@ -22,8 +22,8 @@ export const TrendAnalysis = () => {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="quality" fill="#8884d8" />
-            <Bar dataKey="contamination" fill="#82ca9d" />
+            <Bar dataKey="quality" fill="#8884d8" name="Qualidade" />
+            <Bar dataKey="degradation" fill="#82ca9d" name="Degradação" />
           </BarChart>
         </Grid>
       </Grid>

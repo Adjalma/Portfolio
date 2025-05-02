@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, Card, CardContent, CardMedia, Typography, Button, Box } from '@mui/material';
 import { Download, Visibility } from '@mui/icons-material';
-import { Book } from '../../../types/books';
-import { books } from '../../../config/books';
+import { Book } from '../../../../types/books';
+import { books } from '../../../../config/books';
 
 export const BookList = () => {
   return (

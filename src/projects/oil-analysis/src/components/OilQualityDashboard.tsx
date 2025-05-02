@@ -2,10 +2,10 @@ import React from 'react';
 import { Paper, Typography, Grid } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
-const data = [
-  { time: '00:00', viscosity: 35.2, density: 0.87, waterContent: 0.5 },
-  { time: '02:00', viscosity: 35.4, density: 0.88, waterContent: 0.4 },
-  { time: '04:00', viscosity: 35.1, density: 0.87, waterContent: 0.6 },
+const oilData = [
+  { time: '08:00', viscosity: 85, acidity: 2.5, contamination: 0.5 },
+  { time: '10:00', viscosity: 82, acidity: 2.7, contamination: 0.6 },
+  { time: '12:00', viscosity: 84, acidity: 2.6, contamination: 0.4 }
 ];
 
 export const OilQualityDashboard = () => {
@@ -16,15 +16,15 @@ export const OilQualityDashboard = () => {
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <LineChart width={800} height={400} data={data}>
+          <LineChart width={800} height={400} data={oilData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="time" />
             <YAxis />
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="viscosity" stroke="#8884d8" />
-            <Line type="monotone" dataKey="density" stroke="#82ca9d" />
-            <Line type="monotone" dataKey="waterContent" stroke="#ffc658" />
+            <Line type="monotone" dataKey="viscosity" stroke="#8884d8" name="Viscosidade" />
+            <Line type="monotone" dataKey="acidity" stroke="#82ca9d" name="Acidez" />
+            <Line type="monotone" dataKey="contamination" stroke="#ffc658" name="Contaminação" />
           </LineChart>
         </Grid>
       </Grid>

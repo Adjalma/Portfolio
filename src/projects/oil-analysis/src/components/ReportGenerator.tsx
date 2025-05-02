@@ -1,11 +1,11 @@
 import React from 'react';
-import { Paper, Typography, Button, Grid, List, ListItem, ListItemText } from '@mui/material';
-import { PictureAsPdf, Share } from '@mui/icons-material';
+import { Paper, Typography, List, ListItem, ListItemText, Button, Box } from '@mui/material';
+import { PictureAsPdf, TableChart } from '@mui/icons-material';
 
 const reports = [
-  { id: 1, title: 'Análise Mensal - Março 2024', date: '01/04/2024' },
-  { id: 2, title: 'Relatório de Qualidade Q1', date: '31/03/2024' },
-  { id: 3, title: 'Análise de Tendências', date: '15/03/2024' },
+  { id: 1, title: 'Relatório Mensal - Março 2024', type: 'PDF' },
+  { id: 2, title: 'Análise Comparativa Q1', type: 'Excel' },
+  { id: 3, title: 'Indicadores de Qualidade', type: 'PDF' }
 ];
 
 export const ReportGenerator = () => {
@@ -17,16 +17,16 @@ export const ReportGenerator = () => {
       <List>
         {reports.map((report) => (
           <ListItem key={report.id}>
-            <ListItemText 
-              primary={report.title}
-              secondary={report.date}
-            />
-            <Button startIcon={<PictureAsPdf />} sx={{ mr: 1 }}>
-              PDF
-            </Button>
-            <Button startIcon={<Share />}>
-              Compartilhar
-            </Button>
+            <ListItemText primary={report.title} secondary={`Formato: ${report.type}`} />
+            <Box>
+              <Button
+                startIcon={report.type === 'PDF' ? <PictureAsPdf /> : <TableChart />}
+                variant="outlined"
+                size="small"
+              >
+                Download
+              </Button>
+            </Box>
           </ListItem>
         ))}
       </List>

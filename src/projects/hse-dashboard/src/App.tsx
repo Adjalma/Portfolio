@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import { SafetyMetrics } from './components/SafetyMetrics';
-import { IncidentReport } from './components/IncidentReport';
-import { EnvironmentalData } from './components/EnvironmentalData';
+import { IncidentReports } from './components/IncidentReports';
+import { ComplianceStatus } from './components/ComplianceStatus';
 
 export const HSEDashboardApp = () => {
   return (
@@ -11,14 +11,14 @@ export const HSEDashboardApp = () => {
         Dashboard HSE
       </Typography>
       <Grid container spacing={3}>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12}>
           <SafetyMetrics />
         </Grid>
-        <Grid item xs={12} md={4}>
-          <IncidentReport />
+        <Grid item xs={12} md={6}>
+          <IncidentReports />
         </Grid>
-        <Grid item xs={12} md={4}>
-          <EnvironmentalData />
+        <Grid item xs={12} md={6}>
+          <ComplianceStatus />
         </Grid>
       </Grid>
     </Box>
