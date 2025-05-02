@@ -12,7 +12,7 @@ export const SafetyMetrics = () => {
   return (
     <Paper sx={{ p: 2 }}>
       <Typography variant="h6" gutterBottom>
-        MÃ©tricas de SeguranÃ§a
+        Métricas de Segurança
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12}>
@@ -30,4 +30,4 @@ export const SafetyMetrics = () => {
       </Grid>
     </Paper>
   );
-}; 
+};
