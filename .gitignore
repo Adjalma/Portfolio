@@ -28,3 +28,10 @@ yarn-error.log*
 dist/
 .gradle/
 build/
+
+# Não ignorar projetos
+!/src/projects/
+!/src/projects/*/src/
+!/src/projects/*/src/components/
+!/src/projects/*/src/components/*.tsx
+!/src/projects/*/src/App.tsx
