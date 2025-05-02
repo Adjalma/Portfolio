@@ -1,9 +1,8 @@
 import { setupServer } from 'msw/node';
 import { rest } from 'msw';
-import { RestRequest, RestContext } from 'msw';
 
 export const server = setupServer(
-  rest.get('/api/wells', (req: RestRequest, res, ctx: RestContext) => {
+  rest.get('/api/wells', (_, res, ctx) => {
     return res(
       ctx.json([
         {
@@ -19,7 +18,7 @@ export const server = setupServer(
     );
   }),
 
-  rest.get('/api/alerts', (req: RestRequest, res, ctx: RestContext) => {
+  rest.get('/api/alerts', (_, res, ctx) => {
     return res(
       ctx.json([
         {
