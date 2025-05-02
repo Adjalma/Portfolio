@@ -42,7 +42,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build --dotfiles true --message 'Deploy to GitHub Pages'"
+    "deploy": "gh-pages -d build -m \"Deploy to GitHub Pages\""
   },
   "eslintConfig": {
     "extends": [
