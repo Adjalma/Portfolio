@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Container, Box } from '@mui/material';
@@ -22,11 +22,11 @@ import { MaintenancePredictorApp } from './projects/maintenance-predictor/src/Ap
 
 import { theme } from './theme';
 
-export const App = () => {
+function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter>
+      <Router>
         <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
           <Header />
           <Container component="main" sx={{ flex: 1, py: 4 }}>
@@ -45,7 +45,9 @@ export const App = () => {
             </Routes>
           </Container>
         </Box>
-      </BrowserRouter>
+      </Router>
     </ThemeProvider>
   );
-};
+}
+
+export default App;
