@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Typography, Grid, Card, CardContent } from '@mui/material';
+import { Box, Typography, Grid, Card, CardContent, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { projects } from '../config/projects';
 
 export function ProjectList() {
@@ -16,9 +17,17 @@ export function ProjectList() {
                 <Typography variant="h6" component="h2">
                   {project.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                   {project.description}
                 </Typography>
+                <Button 
+                  component={Link} 
+                  to={project.path}
+                  variant="contained" 
+                  color="primary"
+                >
+                  Ver Projeto
+                </Button>
               </CardContent>
             </Card>
           </Grid>
