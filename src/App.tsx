@@ -11,7 +11,7 @@ import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { theme } from './theme';
 
-function App() {
+export const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -29,6 +29,4 @@ function App() {
       </Router>
     </ThemeProvider>
   );
-}
-
-export default App;
+};
